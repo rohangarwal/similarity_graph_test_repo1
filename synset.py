@@ -11,9 +11,9 @@ class Synset:
             edges =-
         '''
         self.definition = definition
-        self.edges =
-        self.lemma_names =
-        self.examples =
+        self.edges = edges
+        self.lemma_names = lemma_names
+        self.examples = examples
 
 
 
@@ -37,4 +37,13 @@ class Noun(Synset):
 
 class Verb(Synset):
 
-    def __init__(self):
+    def __init__(self,definition,edges,lemmas,examples):
+        Synset.__init__(self,definition,edges,lemmas,examples)
+
+class Adjective(Synset):
+    def __init__(self,definition,edges,lemmas,examples):
+        Synset.__init__(self,definition,edges,lemmas,examples)
+
+class Adverb(Synset):
+    def __init__(self,definition,edges,lemmas,examples):
+        Synset.__init__(self,definition,edges,lemmas,examples)
