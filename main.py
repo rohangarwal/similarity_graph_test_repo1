@@ -8,9 +8,13 @@ wn_synset_to_synset_object = shelve.open('wn_synset_to_synset_object')
 
 def make_words_and_synsets(word):
     new_word = Word(label=word)
+    #print type(word)
+    word = str(word)
+    print word
     label_to_word_object[word] = new_word
     #print type(str(wn.synsets(word)[0].pos()))
     for synset in wn.synsets(word):
+        print synset
         if str(synset.pos()) == 'n':
             #noun synset
             new_word.nouns.append(Noun(
