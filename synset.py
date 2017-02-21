@@ -36,7 +36,6 @@ class Noun(Synset):
             self.meronyms.extend(values)
 
 class Verb(Synset):
-
     def __init__(self,definition,edges,lemmas,examples):
         Synset.__init__(self,definition,edges,lemmas,examples)
 

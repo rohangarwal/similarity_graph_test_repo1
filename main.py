@@ -4,6 +4,7 @@ from word import Word
 import shelve
 
 label_to_word_object = shelve.open('label_to_word_object')
+wn_synset_to_synset_object = shelve.open('wn_synset_to_synset_object')
 
 def make_words_and_synsets(word):
     new_word = Word(label=word)
