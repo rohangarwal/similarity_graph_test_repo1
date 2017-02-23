@@ -12,12 +12,12 @@ class Synset:
         '''
         self.definition = definition
         self.edges = edges
-        self.lemma_names = lemma_names
+        self.lemma_names = lemmas
         self.examples = examples
 
 
 
-class Noun(Synset):
+class Noun(Synset): #NounSynset
     '''
     '''
 

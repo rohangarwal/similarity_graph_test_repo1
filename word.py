@@ -4,6 +4,7 @@ class Word:
 
     def __init__(self,label):
         self.label = label
+        self.domain
         self.nouns = list()
         self.verbs = list()
         self.adjectives = list()
