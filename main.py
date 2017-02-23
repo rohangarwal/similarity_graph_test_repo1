@@ -7,6 +7,7 @@ from synset import Verb
 from synset import Adjective
 from synset import Adverb
 import shelve
+from synset import make_synsets
 
 label_to_word_object = shelve.open('label_to_word_object')
 wn_synset_to_synset_object = shelve.open('wn_synset_to_synset_object')
@@ -15,6 +16,8 @@ def make_words_and_synsets(word):
     new_word = Word(label=word)
     #print type(word)
     word = str(word)
+    make_synsets(word)
+    '''
     #print type(str(wn.synsets(word)[0].pos()))
     for synset in wn.synsets(word):
         #print synset
@@ -40,7 +43,8 @@ def make_words_and_synsets(word):
 
         else:
             print 'Error, POS not found!'
-        label_to_word_object[word] = new_word
+    '''
+    label_to_word_object[word] = new_word
 
 def handle_error():
     print 'all words done, closing dictionary'
